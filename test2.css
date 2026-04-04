@@ -1,0 +1,141 @@
+/* Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Color Variables (Blue-gray + earth tones) */
+:root {
+    --bg-main: #eef2f3;
+    --blue-gray: #4a6572;
+    --blue-gray-dark: #344955;
+    --accent: #aab7b8;
+
+    --tone1: #d8e2dc;
+    --tone2: #e8d8c3;
+    --tone3: #dbe7e4;
+}
+
+/* Base */
+body {
+    font-family: Arial, sans-serif;
+    background: var(--bg-main);
+    color: #333;
+    scroll-behavior: smooth;
+}
+
+/* Header */
+header {
+    background: var(--blue-gray-dark);
+    color: white;
+    padding: 1rem;
+    position: sticky;
+    top: 0;
+}
+
+header h1 {
+    margin-bottom: 0.5rem;
+}
+
+/* Nav */
+nav ul {
+    display: flex;
+    flex-wrap: wrap;
+    list-style: none;
+    gap: 0.5rem;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    background: var(--blue-gray);
+    padding: 0.4rem 0.7rem;
+    border-radius: 5px;
+}
+
+nav a:hover {
+    background: #5f7d8a;
+}
+
+/* Sections */
+section {
+    padding: 2rem 1rem;
+    max-width: 1000px;
+    margin: 1.5rem auto;
+    border-radius: 10px;
+}
+
+/* Earth-tone backgrounds */
+.tone1 { background: var(--tone1); }
+.tone2 { background: var(--tone2); }
+.tone3 { background: var(--tone3); }
+
+/* Headings */
+section h2 {
+    margin-bottom: 1rem;
+    color: var(--blue-gray-dark);
+}
+
+/* Links grid */
+.links {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 1rem;
+}
+
+/* Link cards */
+.links a {
+    display: block;
+    padding: 1rem;
+    background: white;
+    border-radius: 8px;
+    text-decoration: none;
+    color: #333;
+    text-align: center;
+    border: 1px solid #ccc;
+    transition: 0.2s;
+}
+
+.links a:hover {
+    background: #f0f0f0;
+    border-color: var(--blue-gray);
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    padding: 1rem;
+    background: var(--blue-gray-dark);
+    color: white;
+    margin-top: 2rem;
+}
+
+/* Back to Top Button */
+.back-to-top {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background: var(--blue-gray);
+    color: white;
+    text-decoration: none;
+    padding: 0.6rem 0.9rem;
+    border-radius: 50px;
+    font-size: 0.9rem;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.2);
+}
+
+.back-to-top:hover {
+    background: var(--blue-gray-dark);
+}
+
+/* Mobile */
+@media (max-width: 600px) {
+    nav ul {
+        justify-content: center;
+    }
+
+    header h1 {
+        text-align: center;
+    }
+}
