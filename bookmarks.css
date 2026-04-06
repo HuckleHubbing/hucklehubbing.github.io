@@ -11,14 +11,12 @@
     --card: #2a2c36;
     --text: #e4e6eb;
 
-    --tone1:#2f3a34;
-    --tone2:#3a332c;
-    --tone3:#2c3539;
-    --tone4:#3a2f33;
-    --tone5:#2f3a3a;
-    --tone6:#3a352f;
-    --tone7:#2f2f3a;
-    --tone8:#3a3a2f;
+    --tone1:#434052; /* purple */
+    --tone2:#405240; /* green */
+    --tone3:#524140; /* brown */
+    --tone4:#505240; /* yellowish */
+    --tone5:#452929; /* red */
+    --tone6:#1E3030; /* green-darker */
 }
 
 /* Subtle vertical stripes */
