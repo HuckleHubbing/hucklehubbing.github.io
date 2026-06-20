@@ -11,32 +11,17 @@
 
 <header>
 
-<!-- Mobile menu trigger -->
-<a href="#menu" class="menu-icon">☰</a>
-
-<!-- Desktop nav -->
-<nav class="desktop-nav">
-<ul>
-<li><a href="#work">Assessing</a></li>
-<li><a href="#hr">HR-Related</a></li>
-<li><a href="#other">Other</a></li>
-</ul>
-</nav>
-
-<!-- Mobile slide menu -->
-<nav id="menu">
-<a href="#" class="overlay"></a>
-
-<div class="menu-panel">
-<a href="#top" class="close-menu">✕</a>
-
-<ul>
-<li><a href="#work">Assessing</a></li>
-<li><a href="#hr">HR-Related</a></li>
-<li><a href="#other">Other</a></li>
-</ul>
-</div>
-</nav>
+  <nav class="site-nav">
+    <span class="site-nav__title">Meditology</span>
+    <button class="nav-hamburger" id="navToggle" aria-label="Toggle navigation" aria-expanded="false">
+      <span></span><span></span><span></span>
+    </button>
+    <ul class="desktop-nav" id="navLinks">
+      <li><a href="#work">Assessing</a></li>
+      <li><a href="#hr">HR-Related</a></li>
+      <li><a href="#other">Other</a></li>
+    </ul>
+  </nav>
 
 </header>
 
@@ -119,5 +104,21 @@
 
 <a href="#top" class="back-to-top">↑</a>
 
+<script>
+  const navToggle = document.getElementById('navToggle');
+  const navLinks  = document.getElementById('navLinks');
+  navToggle.addEventListener('click', () => {
+    const isOpen = navLinks.classList.toggle('is-open');
+    navToggle.classList.toggle('is-open', isOpen);
+    navToggle.setAttribute('aria-expanded', isOpen);
+  });
+  navLinks.querySelectorAll('a').forEach(link => {
+    link.addEventListener('click', () => {
+      navLinks.classList.remove('is-open');
+      navToggle.classList.remove('is-open');
+      navToggle.setAttribute('aria-expanded', false);
+    });
+  });
+</script>
 </body>
 </html>
